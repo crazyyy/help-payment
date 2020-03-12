@@ -1,0 +1,134 @@
+{
+  "syntax" : "scss",
+  "extends": ["stylelint-config-prettier"],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-config-rational-order/plugin",
+    "stylelint-selector-bem-pattern"
+  ],
+  "rules"  : {
+    "indentation"                : 2,
+    "order/order"                : [
+      "custom-properties", {
+        "type": "at-rule",
+        "name": "include"
+      },
+      "declarations", {
+        "type": "at-rule",
+        "name": "media"
+      },
+      {
+        "type"    : "rule",
+        "selector": "^&:\\w+$"
+      },
+      {
+        "type"    : "rule",
+        "selector": "^\\.[-_a-zA-Z0-9]+"
+      },
+      {
+        "type"    : "rule",
+        "selector": "^&__[-a-z0-9]+"
+      },
+      {
+        "type"    : "rule",
+        "selector": "^&--[-a-z0-9]+"
+      }
+    ],
+    "order/properties-order"     : [
+      {
+        "properties": [
+          "content",
+          "box-sizing",
+          "display",
+          "flex",
+          "flex-wrap",
+          "flex-basis",
+          "flex-direction",
+          "flex-flow",
+          "flex-grow",
+          "flex-shrink",
+          "align-content",
+          "align-items",
+          "align-self",
+          "justify-content",
+          "order",
+          "grid",
+          "grid-area",
+          "grid-auto-*",
+          "grid-column",
+          "grid-column-*",
+          "grid-gap",
+          "grid-row",
+          "grid-row-*",
+          "grid-template",
+          "grid-template-*",
+          "position",
+          "z-index",
+          "top",
+          "right",
+          "bottom",
+          "left",
+          "width",
+          "min-width",
+          "max-width",
+          "height",
+          "min-height",
+          "max-height",
+          "overflow",
+          "overflow-*",
+          "margin",
+          "margin-*",
+          "border",
+          "border-*",
+          "padding",
+          "padding-*",
+          "transform",
+          "transform-*",
+          "backface-visibility",
+          "perspective",
+          "perspective-origin",
+          "transition",
+          "transition-*",
+          "animation",
+          "animation-*"
+        ]
+      }
+    ],
+    "plugin/rational-order"      : [
+      true, {
+        "border-in-box-model"      : false,
+        "empty-line-between-groups": false
+      }
+    ],
+    "plugin/selector-bem-pattern": [
+      {
+        "implicitComponents": true,
+        "componentName"     : "[-a-z]+",
+        "componentSelectors": {
+          "initial" : "^(\\.{componentName}(__[a-z]+|--[-a-z0-9]+|__[-a-z]+--[-a-z0-9]+|.[-a-z]+|__[a-z]+.[-a-z]+)?)$",
+          "combined": "^.+$"
+        },
+        "ignoreSelectors"   : [
+          "^\\.(no-)?js(-modal-open)?$",
+          "a(\\[[a-z]+|:[a-z]+)?",
+          "h[1-6]",
+          "pre",
+          "blockquote",
+          "thead",
+          "tr",
+          "img",
+          "img",
+          "p",
+          "table",
+          "^&:empty",
+          "#{\\$[-a-z]+}__[-a-z]+",
+          "^\\*$"
+        ]
+      },
+      {
+        "severity": "warning",
+        "message" : "Селектор не из имени файла или БЭМ-ошибка"
+      }
+    ]
+  }
+}

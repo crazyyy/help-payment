@@ -1,0 +1,34 @@
+{
+  "arrowParens"       : "always",
+  "bracketSpacing"    : true,
+  "endOfLine"         : "lf",
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote"    : true,
+  "parser"            : "babel",
+  "printWidth"        : 180,
+  "proseWrap"         : "preserve",
+  "quoteProps"        : "as-needed",
+  "rangeStart"        : 0,
+  "semi"              : true,
+  "singleQuote"       : true,
+  "tabWidth"          : 2,
+  "trailingComma"     : "es5",
+  "useTabs"           : false,
+  "overrides"         : [
+    {
+      "files"  : "{*.js?(on),*.y?(a)ml,.*.js?(on),.*.y?(a)ml,*.md,.prettierrc,.stylelintrc,.babelrc}",
+      "options": {
+        "tabWidth": 2
+      }
+    },
+    {
+      "files"  : "{**/.vscode/*.json,**/tsconfig.json,**/tsconfig.*.json}",
+      "options": {
+        "parser"       : "json5",
+        "quoteProps"   : "preserve",
+        "singleQuote"  : false,
+        "trailingComma": "all"
+      }
+    }
+  ]
+}

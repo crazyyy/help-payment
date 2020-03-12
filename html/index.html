@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="header">
+  <div class="container header">
+    <div class="row d-flex justify-content-between">
+      <div class="header__title">
+        <img class="header__img" src="img/slash.png" alt="">
+        <p>
+          Front-end Developer Test Task </p>
+      </div>
+
+      <div class="header__cart">
+        <a href="#"> cart </a>
+        <img src="img/cart.png" alt="">
+        <span class="header__cart__span">3</span>
+
+      </div>
+    </div>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-7 px-4">
+
+
+        <nav class="nav ">
+          <ul class="nav__tabs pl-0">
+            <li class="nav__tab-link current" data-tab="tab-1">
+              Shipping
+            </li>
+            <li class="nav__tab-link" data-tab="tab-2">
+              Billing
+            </li>
+            <li class="nav__tab-link" data-tab="tab-3">
+              Payment
+            </li>
+          </ul>
+        </nav>
+
+        <form class="form" id="main-form">
+
+          <div class="form--steap form--steap-1 form--steap--active" data-id="1">
+
+            <h2 class="form__title">Shipping info</h2>
+            <div class="form-row ">
+              <div class="form-group col-md-12 ">
+                <input type="text" class="form-control" id="#" placeholder="Full name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="phone" class="form-control" placeholder="Daytime Phone">
+              </div>
+              <div class="form-group col-md-6 ml-0">
+                <p class="form__text pt-1">
+                  For delivery <br>questions only </p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <h3 class="form__subtitle">Address</h3>
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="#" placeholder="Street Address">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="#" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="#" placeholder="City">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <select id="inputState" class="form-control">
+                  <option selected>Country</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="inputZip" placeholder="ZIP">
+              </div>
+            </div>
+
+
+          </div>
+          <!-- /.form--steap form--steap-1 form--steap--active -->
+
+
+          <div class="form--steap form--steap-2" data-id="2">
+            <h2 class="form__title">Billing info</h2>
+            <div class="form-row ">
+              <div class="form-group col-md-12 ">
+                <input type="text" class="form-control" id="#" placeholder="Full name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <input type="email" class="form-control" placeholder="Email Address">
+              </div>
+            </div>
+            <div class="form-row">
+              <h3 class="form__subtitle">Billing Address</h3>
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="#" placeholder="Street Address">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="#" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="#" placeholder="City">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <select id="inputState" class="form-control">
+                  <option selected>Country</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="inputZip" placeholder="ZIP">
+              </div>
+            </div>
+
+          </div>
+          <!-- /.form--steap form--steap-2 -->
+
+
+          <div class="form--steap form--steap-3" data-id="3">
+            <h2 class="form__title">Payment</h2>
+
+            <div class="form-row">
+              <div class="form-group col-md-12 ml-0 d-flex">
+                <img src="img/Shape.png" alt="">
+                <p class="payment__text">
+                  This is a secure 128-bit SSL encrypted payment </p>
+              </div>
+
+            </div>
+            <div class="form-row">
+              <h3 class="form__title">Cardholder Name</h3>
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="#" placeholder="Name as it appears on your card">
+              </div>
+            </div>
+            <div class="form-row">
+              <h3 class="form__subtitle">Card Number</h3>
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="#" placeholder="XXXX XXXX XXXX XXXX XXXX">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <p class="form__subtitle">Expire Date</p>
+                <input type="text" class="form-control" id="inputdate" placeholder="MM / YY">
+              </div>
+              <div class="form-group col-md-6">
+                <p class="form__subtitle">Security Code</p>
+                <input type="text" class="form-control" id="inputcvv" placeholder="">
+              </div>
+            </div>
+          </div>
+          <!-- /.form--steap form--steap-3 -->
+
+          <div class="form--steap form--steap-4" data-id="4">
+            <div class="form col-md-12">
+              <div class="tnx">
+                <h3 class="tnx__title">Thank you for your order!</h3>
+                <div class="tnx__text">
+                  <strong> Order number is: 188787788 </strong>
+                  <p>
+                    Your will recieve an email confirmation shortly to <a href="mailto:jonathan.smith@gmail.com">jonathan.smith@gmail.com</a>
+                  </p>
+                  <p>Estimated delivery Day is <br> <strong class="mt-0">Friday 1st April 2016 </strong>
+                  </p>
+                  <a href="#"> Print Recipe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.form--steap form--steap-4 -->
+
+
+          <button type="submit" class="btn button">Continue</button>
+        </form>
+
+
+      </div>
+
+
+      <div class="col-5 bg-light order">
+        <div class="order__title d-flex mt-2 justify-content-between">
+          <h4>Order Summary</h4>
+          <p>edit order</p>
+        </div>
+
+        <div class="order__item">
+          <div class="order__info">
+            <div class="order__product mt-0">
+              <img class="mt-0" src="img/order-1.png" alt="">
+              <div class="order__text">
+                <h5>The Chelsea Boot</h5>
+                <p>Black </p>
+                <p> Quantity:1</p>
+              </div>
+            </div>
+            <div class="order__price">
+              <p>$235</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="order__item">
+          <div class="order__info">
+            <div class="order__product mt-0">
+              <img class="mt-0" src="img/order-2.png" alt="">
+              <div class="order__text">
+                <h5>The Twill Snap Backpack</h5>
+                <p>Reverse Denim + Brown leather</p>
+                <p> Quantity:1</p>
+              </div>
+            </div>
+            <div class="order__price">
+              <p>$235</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="order__item">
+          <div class="order__info">
+            <div class="order__product mt-0">
+              <img class="mt-0" src="img/order-3.png" alt="">
+              <div class="order__text">
+                <h5>The Twill Zip Tote</h5>
+                <p>Reverse Denim + Black leather</p>
+                <p> Quantity:1</p>
+              </div>
+            </div>
+            <div class="order__price">
+              <p>$235</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="order__item">
+          <div class="order__info order__info_price">
+            <div class="order__text">
+              <h5>Subtotal</h5>
+            </div>
+            <div class="order__price">
+              <p>$398</p>
+            </div>
+          </div>
+          <div class="order__info order__info_price">
+            <div class="order__text">
+              <h5>Shipping</h5>
+            </div>
+            <div class="order__price">
+              <p>Free</p>
+            </div>
+          </div>
+          <div class="order__info order__info_price">
+            <div class="order__text">
+              <h5>Taxes</h5>
+            </div>
+            <div class="order__price">
+              <p>$12.12</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="order_totalprice">
+          <p>Total</p>
+          <p>$410.12</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
